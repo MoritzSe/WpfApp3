@@ -412,5 +412,12 @@
   <ItemGroup>
     <Resource Include="Images\Browser_burned.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\TurnLeftArrow.png" />
+    <Resource Include="Images\TurnRightArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\StraightArrow.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

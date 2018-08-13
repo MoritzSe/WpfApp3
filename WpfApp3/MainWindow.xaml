@@ -101,32 +101,29 @@
             </Grid>
         </Border>
         <!-- Frames um Geschwindigkeit sowie Drehzahl einzufügen, falls keine Frames Margin und Size übernehmen!-->
-        <Grid x:Name="speedgrid" Height="500" Width="750"
+        <Grid x:Name="speedgrid" Height="300" Width="300"
               HorizontalAlignment="Left" VerticalAlignment="Bottom"
-              Margin="1950,0,0,150">
-            <Frame x:Name="littlespeendframe" Margin="400,150,0,0">
-                <!-- Navigating ="littlespeendframe_Navigating" -->
-
-                <Frame.RenderTransform>
+              Margin="2070,0,0,150">
+            <!--<Frame x:Name="littlespeendframe" Margin="0">
+                --><!-- Navigating ="littlespeendframe_Navigating" -->
+                <!--<Frame.RenderTransform>
                     <ScaleTransform x:Name="scale1"/>
-                </Frame.RenderTransform>
-            </Frame>
-
-
+                </Frame.RenderTransform>--><!--
+            </Frame>-->
             <!--
         <Frame Name="FrameSpeed" Content="Frame" HorizontalAlignment="Left" 
                VerticalAlignment="Bottom" Height="500" 
                Width="750"/>
             -->
         </Grid>
-        <Grid x:Name="rpmgrid" Height="500" Width="750"
+        <Grid x:Name="rpmgrid" Height="300" Width="300"
               HorizontalAlignment="Right" VerticalAlignment="Bottom"
-              Margin="0,0,1950,150">
-            <Frame x:Name="littlerpmframe" Margin="0,150,400,0">
+              Margin="0,0,2070,150">
+            <!--<Frame x:Name="littlerpmframe" Margin="0,150,400,0">
                 <Frame.RenderTransform>
                     <ScaleTransform x:Name="scale2"/>
                 </Frame.RenderTransform>
-            </Frame>
+            </Frame>-->
             <!--<Frame Name="FrameRPM"  
                Content="Frame" HorizontalAlignment="Right" 
                VerticalAlignment="Bottom" Height="500" 
@@ -264,19 +261,101 @@
                         </Image.RenderTransform>
                     </Image>
 
-                    <Grid Width="200" Height="400" HorizontalAlignment="Left" Margin="50"
-                          Background="#333333" Opacity="0.5">
+
+                    <Grid Width="230" Height="200" HorizontalAlignment="Left" Margin="20,0,0,220" Background="#333333"
+                          Opacity="0.9">
+                        <!--<Grid.Effect>
+                            <BlurEffect Radius="5"/>
+                        </Grid.Effect>-->
+                    </Grid>
+                    <Grid Width="230" Height="160" HorizontalAlignment="Left" Background="#808080" Opacity="0.9" Margin="20,140,0,0">
+                        <!--<Grid.Effect>
+                            <BlurEffect Radius="5"/>
+                        </Grid.Effect>-->
+                    </Grid>
+                    <Grid Width="230" Height="50" HorizontalAlignment="Left" Margin="20,350,0,0" Background="#333333" Opacity="0.9"/>
+
+
+                    <Grid Width="230" Height="400" HorizontalAlignment="Left" Margin="20"
+                          Background="Transparent" Opacity="1">
+                        
                         <StackPanel Orientation="Vertical">
 
-                            <TextBlock Background="Transparent" Foreground="#CCCCC6" Text="Navigation"
-                                       FontSize="35" FontFamily="Arial" FontWeight="Light"/>
-                            <Grid Height="200">
-                                <Rectangle Width="3" Height="50" Fill="#005293"/>
-                                <Rectangle Height="3" Width="35" Fill="#005293" Margin="101.5,75,63.5,122" />
+                            <TextBox Background="Transparent" Foreground="#CCCCC6" Text="Navigation"
+                                       FontSize="35" FontFamily="Arial" FontWeight="Light" BorderThickness="0"
+                                     HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                            <Grid Height="150"> <!-- Hier in so und so da und da abbiegen Bild einfügen -->
+                                <Image Source="/Images/TurnRightArrow.png" Width="100" Stretch="UniformToFill" 
+                                       Height="110" Margin="0,0,130,20"/>
+                                <TextBox Foreground="#0065BD" Background="Transparent" FontFamily="Arial"
+                                         FontSize="15" FontWeight="Light" Text="Ludwig-Prandtl-Straße"
+                                         Height="20" Width="155" Margin="70,20,0,0" BorderThickness="0" AcceptsReturn="True"
+                                         HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                                <TextBox Foreground="#CCCCC6" Background="Transparent" FontFamily="Arial"
+                                         FontSize="20" FontWeight="Light" Text="450 m"
+                                         Height="20" Width="100" Margin="70,0,0,50" BorderThickness="0" AcceptsReturn="True"
+                                         HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
 
-                                <TextBlock Foreground="#CCCCC6" Background="Transparent" FontFamily="Arial"
-                                           FontSize="10" FontWeight="Light" Text="Ludwig-Prandtl-Straße"
-                                           Height="20" Width="100" Margin="106.5,83,-6.5,97"/>
+                            </Grid>
+
+                            <Grid Height="80">
+                                <Image Source="/Images/TurnLeftArrow.png"  HorizontalAlignment="Left" Height="50"/>
+                                <TextBox Background="Transparent" Foreground="#CCCCC6" Text="600 m" FontFamily="Arial"
+                                         HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                                         FontSize="15" Width="70" Height="20" BorderThickness="0"
+                                         Margin="70,0,0,20"/>
+                                <TextBox Foreground="#0065BD" Background="Transparent" FontFamily="Arial"
+                                         FontSize="15" FontWeight="Light" Text="Freisinger Landstraße"
+                                         Height="20" Width="155" Margin="70,20,0,0" BorderThickness="0" AcceptsReturn="True"
+                                         HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                                <!-- dann hier abbiegen-->
+                            </Grid>
+                            <Grid Height="80">
+                                <Image Source="/Images/StraightArrow.png"  HorizontalAlignment="Left" Height="50"/>
+                                <TextBox Background="Transparent" Foreground="#CCCCC6" Text="12.5 km" FontFamily="Arial"
+                                         HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                                         FontSize="15" Width="70" Height="20" BorderThickness="0"
+                                         Margin="70,0,0,20"/>
+                                <TextBox Foreground="#0065BD" Background="Transparent" FontFamily="Arial"
+                                         FontSize="15" FontWeight="Light" Text="Müchnener Straße"
+                                         Height="20" Width="155" Margin="70,20,0,0" BorderThickness="0" AcceptsReturn="True"
+                                         HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                                <!-- dann dort abbiegen -->
+                            </Grid>
+
+                            <Grid Height="50">
+                                
+                                <!--Weitere Informationen einfügen. Ziel erreicht in xxx Time, xxx Km, Ankunft um xx:xx-->
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <TextBox Grid.Column="0" Background="Transparent" Foreground="#CCCCC6" 
+                                         BorderThickness="0" FontFamily="Arial" Height="20" Text="Time" 
+                                         VerticalAlignment="Top" HorizontalContentAlignment="Center"
+                                         VerticalContentAlignment="Center"/>
+                                <TextBox Grid.Column="1" Background="Transparent" Foreground="#CCCCC6" 
+                                         BorderThickness="0" FontFamily="Arial" Height="20" Text="Distance" 
+                                         VerticalAlignment="Top" HorizontalContentAlignment="Center"
+                                         VerticalContentAlignment="Center"/>
+                                <TextBox Grid.Column="2" Background="Transparent" Foreground="#CCCCC6" 
+                                         BorderThickness="0" FontFamily="Arial" Height="20" Text="Arrival" 
+                                         VerticalAlignment="Top" HorizontalContentAlignment="Center"
+                                         VerticalContentAlignment="Center"/>
+                                <TextBox Grid.Column="0" Background="Transparent" Foreground="#CCCCC6" 
+                                         BorderThickness="0" FontFamily="Arial" Height="30" Text="2:45" 
+                                         VerticalAlignment="Bottom" HorizontalContentAlignment="Center"
+                                         VerticalContentAlignment="Center" FontSize="18"/>
+                                <TextBox Grid.Column="1" Background="Transparent" Foreground="#CCCCC6" 
+                                         BorderThickness="0" FontFamily="Arial" Height="30" Text="156 km" 
+                                         VerticalAlignment="Bottom" HorizontalContentAlignment="Center"
+                                         VerticalContentAlignment="Center" FontSize="18"/>
+                                <TextBox Grid.Column="2" Background="Transparent" Foreground="#CCCCC6" 
+                                         BorderThickness="0" FontFamily="Arial" Height="30" Text="3:15pm" 
+                                         VerticalAlignment="Bottom" HorizontalContentAlignment="Center"
+                                         VerticalContentAlignment="Center" FontSize="18"/>
 
                             </Grid>
 

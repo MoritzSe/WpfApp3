@@ -220,13 +220,13 @@ namespace WpfApp3
                 switch(buff)
                 {
                     case 1:
-                    Dispatcher.Invoke(new Action(() => changeSpeedToHAF()), null);
-                    Dispatcher.Invoke(new Action(() => changeRpmToHAF()), null);
+                    //Dispatcher.Invoke(new Action(() => changeSpeedToHAF()), null);
+                    //Dispatcher.Invoke(new Action(() => changeRpmToHAF()), null);
                     break;
 
                     case 2:
-                    Dispatcher.Invoke(new Action(() => changeRpmToManuel()), null);
-                    Dispatcher.Invoke(new Action(() => changeSpeedToManuel()), null);
+                    //Dispatcher.Invoke(new Action(() => changeRpmToManuel()), null);
+                    //Dispatcher.Invoke(new Action(() => changeSpeedToManuel()), null);
                     break;
                 }
                
@@ -746,7 +746,7 @@ namespace WpfApp3
            
         }
 
-        public void changesubmenue (int key)
+        public void changesubmenue (int key) // Aktuell
         {
             switch (key)
             {
@@ -876,7 +876,7 @@ namespace WpfApp3
                     break;
             }
 
-        }
+        } //Aktuell
             
         public void Window_Loaded(object sender, RoutedEventArgs e)
         {
@@ -907,14 +907,14 @@ namespace WpfApp3
 
         public void Click(object sender, RoutedEventArgs e)
         {
-            changeSpeedToHAF();
-            changeRpmToHAF();
+            //changeSpeedToHAF();
+            //changeRpmToHAF();
             isinMainManue = false;
         }
         public void Click2 (object sender, RoutedEventArgs e)
         {
-            changeRpmToManuel();
-            changeSpeedToManuel();
+            //changeRpmToManuel();
+            //changeSpeedToManuel();
             isinMainManue = true;
         }
         public void left(object sender, RoutedEventArgs e)
@@ -992,197 +992,153 @@ namespace WpfApp3
             littlerpmframe.Refresh();
         }
        
-        private void KeyDown(object sender, KeyEventArgs e) //Keyboard Events
-        {
-            if(e.Key == Key.Left)
-            {
-                setFrameSpeedManuelDrive(sender, e);
-            }
-            if(e.Key == Key.Right)
-            {
-                setFrameRpmManualDrive(sender, e);
-            }
-            if(e.Key == Key.Up)
-            {
-                
-            }
-            if(e.Key == Key.Down)
-            {
-
-            }
-            if(e.Key == Key.Space)
-            {
-                if(ManuelDrive == true)
-                {
-                    changeSpeedToHAF();
-                    changeRpmToHAF();
-                }
-                if(ManuelDrive == false)
-                {
-                    changeSpeedToManuel();
-                    changeRpmToManuel();
-                }
-            }
-        }
-
-        public void setFrameSpeedManuelDrive(object sender, RoutedEventArgs e)
-        {
-          //  FrameSpeed.NavigationService.Navigate(new Elements.speed());
-        
-        }
-
-        public void setFrameRpmManualDrive (object sender, RoutedEventArgs e)
-        {
-            //FrameRPM.NavigationService.Navigate(new Elements.rpm());
-        }
-
-        public void changeSpeedToHAF()
-        {
-            /*
-            Duration durationsth = new Duration(TimeSpan.FromMilliseconds(1000)); // hier sehen bei Bildschrim richtiger Größe, welche Geschwindigkeit angemessen ist
-            Thickness thicknesssth = new Thickness(0, 0, 0, 0); // hier sehen welche Alignments by default vertreten sind, dementsprechend anpassen
-            ThicknessAnimation animatespeedtohaf = new ThicknessAnimation(thicknesssth,durationsth);
-            FrameSpeed.BeginAnimation(Frame.MarginProperty, animatespeedtohaf);
-            */
-            double ratio = 150 / 350;
-            var speedscalex = new DoubleAnimation()
-            {
-                From = 1,
-                To = 0.7,
-                Duration = TimeSpan.FromMilliseconds(1000)
-            };
-            var speedscaley = new DoubleAnimation()
-            {
-                From = 1,
-                To = 0.7,
-                Duration = TimeSpan.FromMilliseconds(1000)
-            };
-            scale1.BeginAnimation(ScaleTransform.ScaleXProperty, speedscalex);
-            scale1.BeginAnimation(ScaleTransform.ScaleYProperty, speedscaley);
-            // 400 to left, 150 to bottom 
+        //public void changeSpeedToHAF()
+        //{
+        //    /*
+        //    Duration durationsth = new Duration(TimeSpan.FromMilliseconds(1000)); // hier sehen bei Bildschrim richtiger Größe, welche Geschwindigkeit angemessen ist
+        //    Thickness thicknesssth = new Thickness(0, 0, 0, 0); // hier sehen welche Alignments by default vertreten sind, dementsprechend anpassen
+        //    ThicknessAnimation animatespeedtohaf = new ThicknessAnimation(thicknesssth,durationsth);
+        //    FrameSpeed.BeginAnimation(Frame.MarginProperty, animatespeedtohaf);
+        //    */
+        //    double ratio = 150 / 350;
+        //    var speedscalex = new DoubleAnimation()
+        //    {
+        //        From = 1,
+        //        To = 0.7,
+        //        Duration = TimeSpan.FromMilliseconds(1000)
+        //    };
+        //    var speedscaley = new DoubleAnimation()
+        //    {
+        //        From = 1,
+        //        To = 0.7,
+        //        Duration = TimeSpan.FromMilliseconds(1000)
+        //    };
+        //    scale1.BeginAnimation(ScaleTransform.ScaleXProperty, speedscalex);
+        //    scale1.BeginAnimation(ScaleTransform.ScaleYProperty, speedscaley);
+        //    // 400 to left, 150 to bottom 
             
-            var speedmargin = new ThicknessAnimation()
-            {
-                From = new Thickness(400, 150, 0, 0),
-                To = new Thickness(0, 300, 0, 0),
-                Duration = TimeSpan.FromMilliseconds(1000)
-            };
-            littlespeendframe.BeginAnimation(Frame.MarginProperty, speedmargin); 
-        }
+        //    var speedmargin = new ThicknessAnimation()
+        //    {
+        //        From = new Thickness(400, 150, 0, 0),
+        //        To = new Thickness(0, 300, 0, 0),
+        //        Duration = TimeSpan.FromMilliseconds(1000)
+        //    };
+        //    littlespeendframe.BeginAnimation(Frame.MarginProperty, speedmargin); 
+        //}
 
-        public void changeRpmToHAF()
-        {  
+        //public void changeRpmToHAF()
+        //{  
 
-            var rpmscalex = new DoubleAnimation()
-            {
-                From = 1,
-                To = 0.7,
-                Duration = TimeSpan.FromMilliseconds(1000)
-            };
-            var rpmscaley = new DoubleAnimation()
-            {
-                From = 1,
-                To = 0.7,
-                Duration = TimeSpan.FromMilliseconds(1000)
-            };
-            scale2.BeginAnimation(ScaleTransform.ScaleXProperty, rpmscalex);
-            scale2.BeginAnimation(ScaleTransform.ScaleYProperty, rpmscaley);
-            // 400 to left, 150 to bottom 
+        //    var rpmscalex = new DoubleAnimation()
+        //    {
+        //        From = 1,
+        //        To = 0.7,
+        //        Duration = TimeSpan.FromMilliseconds(1000)
+        //    };
+        //    var rpmscaley = new DoubleAnimation()
+        //    {
+        //        From = 1,
+        //        To = 0.7,
+        //        Duration = TimeSpan.FromMilliseconds(1000)
+        //    };
+        //    scale2.BeginAnimation(ScaleTransform.ScaleXProperty, rpmscalex);
+        //    scale2.BeginAnimation(ScaleTransform.ScaleYProperty, rpmscaley);
+        //    // 400 to left, 150 to bottom 
             
-            var rpmmargin = new ThicknessAnimation()
-            {
-                From = new Thickness(0, 150, 400, 0),
-                To = new Thickness(400, 300, 0, 0),
-                Duration = TimeSpan.FromMilliseconds(1000) 
-            };
-            littlerpmframe.BeginAnimation(Frame.MarginProperty, rpmmargin);
+        //    var rpmmargin = new ThicknessAnimation()
+        //    {
+        //        From = new Thickness(0, 150, 400, 0),
+        //        To = new Thickness(400, 300, 0, 0),
+        //        Duration = TimeSpan.FromMilliseconds(1000) 
+        //    };
+        //    littlerpmframe.BeginAnimation(Frame.MarginProperty, rpmmargin);
 
-            /* Duration durationrth = new Duration(TimeSpan.FromMilliseconds(1000));
-             Thickness thicknessrth = new Thickness(0, 0, 0, 0);
-             ThicknessAnimation animaterpmtohaf = new ThicknessAnimation(thicknessrth, durationrth);
-             FrameRPM.BeginAnimation(Frame.MarginProperty, animaterpmtohaf);
-             */
-            /*
-             // So mach ma's, nur noch anpassen
-            var stx = new DoubleAnimation()
-            {
-                From = 1,
-                To = 0.5,
-                Duration = TimeSpan.FromMilliseconds(1000),
-            };
+        //    /* Duration durationrth = new Duration(TimeSpan.FromMilliseconds(1000));
+        //     Thickness thicknessrth = new Thickness(0, 0, 0, 0);
+        //     ThicknessAnimation animaterpmtohaf = new ThicknessAnimation(thicknessrth, durationrth);
+        //     FrameRPM.BeginAnimation(Frame.MarginProperty, animaterpmtohaf);
+        //     */
+        //    /*
+        //     // So mach ma's, nur noch anpassen
+        //    var stx = new DoubleAnimation()
+        //    {
+        //        From = 1,
+        //        To = 0.5,
+        //        Duration = TimeSpan.FromMilliseconds(1000),
+        //    };
 
-            var sty = new DoubleAnimation()
-            {
-                From = 1,
-                To = 0.5,
-                Duration = TimeSpan.FromMilliseconds(1000)
-            };
-            scale.BeginAnimation(ScaleTransform.ScaleXProperty, stx);
-            scale.BeginAnimation(ScaleTransform.ScaleYProperty, sty);
+        //    var sty = new DoubleAnimation()
+        //    {
+        //        From = 1,
+        //        To = 0.5,
+        //        Duration = TimeSpan.FromMilliseconds(1000)
+        //    };
+        //    scale.BeginAnimation(ScaleTransform.ScaleXProperty, stx);
+        //    scale.BeginAnimation(ScaleTransform.ScaleYProperty, sty);
 
-            var ami1 = new ThicknessAnimation()
-            {
-                From = new Thickness(0, 0, 0, 0),
-                To = new Thickness(50, 50, 0, 0),
-                Duration = TimeSpan.FromMilliseconds(1000)
-            };
-            frame.BeginAnimation(Frame.MarginProperty, ami1);
-             */
-        }
+        //    var ami1 = new ThicknessAnimation()
+        //    {
+        //        From = new Thickness(0, 0, 0, 0),
+        //        To = new Thickness(50, 50, 0, 0),
+        //        Duration = TimeSpan.FromMilliseconds(1000)
+        //    };
+        //    frame.BeginAnimation(Frame.MarginProperty, ami1);
+        //     */
+        //}
 
-        public void changeSpeedToManuel()
-        {
-            var speedscalex = new DoubleAnimation()
-            {
-                From = 0.7,
-                To = 1,
-                Duration = TimeSpan.FromMilliseconds(1000)
-            };
-            var speedscaley = new DoubleAnimation()
-            {
-                From = 0.7,
-                To = 1,
-                Duration = TimeSpan.FromMilliseconds(1000)
-            };
-            scale1.BeginAnimation(ScaleTransform.ScaleXProperty, speedscalex);
-            scale1.BeginAnimation(ScaleTransform.ScaleYProperty, speedscaley);
-            // 400 to left, 150 to bottom
+        //public void changeSpeedToManuel()
+        //{
+        //    var speedscalex = new DoubleAnimation()
+        //    {
+        //        From = 0.7,
+        //        To = 1,
+        //        Duration = TimeSpan.FromMilliseconds(1000)
+        //    };
+        //    var speedscaley = new DoubleAnimation()
+        //    {
+        //        From = 0.7,
+        //        To = 1,
+        //        Duration = TimeSpan.FromMilliseconds(1000)
+        //    };
+        //    scale1.BeginAnimation(ScaleTransform.ScaleXProperty, speedscalex);
+        //    scale1.BeginAnimation(ScaleTransform.ScaleYProperty, speedscaley);
+        //    // 400 to left, 150 to bottom
             
-            var speedmargin = new ThicknessAnimation()
-            {
-                From = new Thickness(0, 300, 0, 0),
-                To = new Thickness(400, 150, 0, 0),
-                Duration = TimeSpan.FromMilliseconds(1000)
-            };
-            littlespeendframe.BeginAnimation(Frame.MarginProperty, speedmargin); 
-        }
+        //    var speedmargin = new ThicknessAnimation()
+        //    {
+        //        From = new Thickness(0, 300, 0, 0),
+        //        To = new Thickness(400, 150, 0, 0),
+        //        Duration = TimeSpan.FromMilliseconds(1000)
+        //    };
+        //    littlespeendframe.BeginAnimation(Frame.MarginProperty, speedmargin); 
+        //}
 
-        public void changeRpmToManuel()
-        {
-            var rpmscalex = new DoubleAnimation()
-            {
-                From = 0.7,
-                To = 1,
-                Duration = TimeSpan.FromMilliseconds(1000)
-            };
-            var rpmscaley = new DoubleAnimation()
-            {
-                From = 0.7,
-                To = 1,
-                Duration = TimeSpan.FromMilliseconds(1000)
-            };
-            scale2.BeginAnimation(ScaleTransform.ScaleXProperty, rpmscalex);
-            scale2.BeginAnimation(ScaleTransform.ScaleYProperty, rpmscaley);
-            // 400 to left, 150 to bottom
+        //public void changeRpmToManuel()
+        //{
+        //    var rpmscalex = new DoubleAnimation()
+        //    {
+        //        From = 0.7,
+        //        To = 1,
+        //        Duration = TimeSpan.FromMilliseconds(1000)
+        //    };
+        //    var rpmscaley = new DoubleAnimation()
+        //    {
+        //        From = 0.7,
+        //        To = 1,
+        //        Duration = TimeSpan.FromMilliseconds(1000)
+        //    };
+        //    scale2.BeginAnimation(ScaleTransform.ScaleXProperty, rpmscalex);
+        //    scale2.BeginAnimation(ScaleTransform.ScaleYProperty, rpmscaley);
+        //    // 400 to left, 150 to bottom
             
-            var rpmmargin = new ThicknessAnimation()
-            {
-                From = new Thickness(400, 300, 0, 0),
-                To = new Thickness(0, 150, 400, 0),
-                Duration = TimeSpan.FromMilliseconds(1000)
-            };
-            littlerpmframe.BeginAnimation(Frame.MarginProperty, rpmmargin); 
-        }
+        //    var rpmmargin = new ThicknessAnimation()
+        //    {
+        //        From = new Thickness(400, 300, 0, 0),
+        //        To = new Thickness(0, 150, 400, 0),
+        //        Duration = TimeSpan.FromMilliseconds(1000)
+        //    };
+        //    littlerpmframe.BeginAnimation(Frame.MarginProperty, rpmmargin); 
+        //}
 
         public void loadspeedelement()
         {

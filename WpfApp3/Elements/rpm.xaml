@@ -6,28 +6,28 @@
              xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing"
              xmlns:local="clr-namespace:WpfApp3.Elements"
              mc:Ignorable="d" 
-             d:DesignHeight="350" d:DesignWidth="350"
+             d:DesignHeight="300" d:DesignWidth="300"
              Background="Transparent">
     <Grid>
         <Grid Margin="0,0,0,-120">
             <ed:Arc StartAngle="-120" EndAngle="120" Stretch="None" 
                     Height="300" Width="300" StrokeThickness="20"      
-                    StrokeDashArray=".25" Stroke="#FF484D5F"
+                    StrokeDashArray=".25" Stroke="#808080"
                     Name="FullArcRpm"/>
             <ed:Arc StartAngle="-120" EndAngle="-35" Stretch="None" 
                     Height="300" Width="300" StrokeThickness="20"
-                    StrokeDashArray=".25" Stroke="Turquoise"
+                    StrokeDashArray=".25" Stroke="#64A0C8"
                     Name="ArcRpm"/>
         </Grid>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center"
                     Margin="0,0,0,-60">
-            <TextBlock Text="rpm" Foreground="#FF878A9F" HorizontalAlignment="Center"
-                        FontSize="14"/>
-            <TextBlock Text="20" Foreground="White" HorizontalAlignment="Center"
-                        FontSize="110" FontWeight="Light" Margin="0,-5,0,0"
-                        Name="RpmVelNumber" FontFamily="Lato"/>
-            <TextBlock Text="x100" Foreground="Wheat" HorizontalAlignment="Center"
-                       FontSize="14" FontWeight="Light" Margin="0,0"/>
+            <TextBlock Text="rpm" Foreground="#CCCCC6" HorizontalAlignment="Center"
+                        FontSize="15" FontFamily="Arial"/>
+            <TextBlock Text="20" Foreground="#CCCCC6" HorizontalAlignment="Center"
+                        FontSize="110" FontWeight="Normal" Margin="0,-5,0,0"
+                        Name="RpmVelNumber" FontFamily="Arial"/>
+            <TextBlock Text="x100" Foreground="#CCCCC6" HorizontalAlignment="Center"
+                       FontSize="15" FontWeight="Light" Margin="0,0" FontFamily="Arial"/>
         </StackPanel>
     </Grid>
 </UserControl>

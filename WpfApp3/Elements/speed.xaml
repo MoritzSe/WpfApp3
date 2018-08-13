@@ -13,19 +13,19 @@
         <Grid Margin="0,0,0,-120" >
             <ed:Arc StartAngle="-120" EndAngle="120" Stretch="None" 
                     Height="300" Width="300" StrokeThickness="20"      
-                    StrokeDashArray=".25" Stroke="#FF484D5F"
+                    StrokeDashArray=".25" Stroke="#808080"
                     Name="FullArcSpeed"/>
             <ed:Arc StartAngle="-120" EndAngle="-35" Stretch="None" 
                     Height="300" Width="300" StrokeThickness="20"
-                    StrokeDashArray=".25" Stroke="Turquoise"
+                    StrokeDashArray=".25" Stroke="#0065BD"
                     x:Name="ArcSpeed"/>
         </Grid>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center"
                     Margin="0,0,0,-50">
-            <TextBlock Text="km/h" Foreground="#FF878A9F" HorizontalAlignment="Center"
-                        FontSize="14"/>
+            <TextBlock Text="km/h" Foreground="#CCCCC6" HorizontalAlignment="Center"
+                        FontSize="15"/>
             <TextBlock Text="42" Foreground="White" HorizontalAlignment="Center"
-                        FontSize="110" FontWeight="Light" Margin="0,-5,0,0" FontFamily="Lato"
+                        FontSize="110" FontWeight="Light" Margin="0,-5,0,0" FontFamily="Arial"
                        Name="SpeedVelNumber"/>
         </StackPanel>
     </Grid>
