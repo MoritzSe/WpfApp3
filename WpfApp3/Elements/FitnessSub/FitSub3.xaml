@@ -1,0 +1,163 @@
+﻿<UserControl x:Class="WpfApp3.Elements.FitnessSub.FitSub3"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfApp3.Elements.FitnessSub"
+             xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="1000">
+    <Grid>
+        <Grid Width="1000">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0" >
+                <TextBox Text="Diese Woche" FontFamily="Arial" FontSize="45"
+                         Foreground="White" Background="Transparent" 
+                         FontWeight="Light" BorderThickness="0"
+                         HorizontalContentAlignment="Center"
+                         VerticalContentAlignment="Center"
+                         />
+                <Grid Height="180" Width="180" Margin="0,10,0,10">
+                    <ed:Arc StartAngle="0" EndAngle="360" Stroke="#FF2F4C59"
+                            StrokeThickness="20"/>
+                    <ed:Arc StartAngle="0" EndAngle="360" Stroke="#FF3DB6DA"
+                            StrokeThickness="20" StrokeEndLineCap="Round"
+                            StrokeStartLineCap="Round">
+                        <ed:Arc.Effect>
+                            <DropShadowEffect
+                                ShadowDepth="0"
+                                Color="AliceBlue"
+                                Opacity="1"
+                                BlurRadius="15"/>
+                        </ed:Arc.Effect>
+                    </ed:Arc>
+
+                    <TextBox Text="Completed" Background="Transparent" FontFamily="Arial"
+                             Foreground="WhiteSmoke" FontSize="17" Height="30"
+                             Width="100" Margin="0,80,0,0" BorderThickness="0"
+                             FontWeight="Light" HorizontalContentAlignment="Center"
+                             VerticalContentAlignment="Center"/>
+                    <TextBox Text="100%" Background="Transparent" FontFamily="Arial"
+                             Foreground="#CCCCC6" FontSize="45" 
+                             Height="80" Width="120" BorderThickness="0"
+                             FontWeight="Light" HorizontalContentAlignment="Center"
+                             VerticalContentAlignment="Center"
+                             Margin="0,0,0,20"/>
+                </Grid>
+
+                <TextBox Text="Gesunder Rücken" Background="Transparent"
+                             Foreground="WhiteSmoke" FontSize="25" Height="30"
+                             BorderThickness="0" FontFamily="Arial"
+                             FontWeight="Light" Margin="60,10,0,0" VerticalContentAlignment="Center"/>
+                <StackPanel Margin="10,0,10,0" Orientation="Horizontal" Height="40">
+                    <Ellipse Height="30" Width="30" Fill="DarkGreen" Stroke="WhiteSmoke"
+                             StrokeThickness="2"/>
+                    <ProgressBar Minimum="0" Maximum="100" Value="100"
+                                 Width="400" Height="10" Margin="20,0,0,0"/>
+                    
+                </StackPanel>
+                <TextBox Text="Siebenmeilenstiefel" Background="Transparent"
+                             Foreground="WhiteSmoke" FontSize="25" Height="30"
+                             BorderThickness="0" FontFamily="Arial"
+                             FontWeight="Light" Margin="60,10,0,0"/>
+                <StackPanel Margin="10,0,10,0" Orientation="Horizontal" Height="40">
+                    <Ellipse Height="30" Width="30" Fill="DarkGreen" Stroke="WhiteSmoke"
+                             StrokeThickness="2"/>
+                    <ProgressBar Minimum="0" Maximum="100" Value="100"
+                                 Width="400" Height="10" Margin="20,0,0,0"/>
+
+                </StackPanel>
+                <TextBox Text="Allrounder" Background="Transparent"
+                             Foreground="WhiteSmoke" FontSize="25" Height="30"
+                             BorderThickness="0" FontFamily="Arial"
+                             FontWeight="Light" Margin="60,10,0,0"/>
+                <StackPanel Margin="10,0,10,0" Orientation="Horizontal" Height="40">
+                    <Ellipse Height="30" Width="30" Fill="DarkGreen" Stroke="WhiteSmoke"
+                             StrokeThickness="2"/>
+                    <ProgressBar Minimum="0" Maximum="100" Value="100"
+                                 Width="400" Height="10" Margin="20,0,0,0"/>
+
+                </StackPanel>
+
+
+            </StackPanel>
+
+
+            <StackPanel Grid.Column="2" >
+                <TextBox Text="Diesen Monat" FontFamily="Arial" FontSize="45"
+                         Foreground="White" Background="Transparent" 
+                         FontWeight="Light" BorderThickness="0"
+                         HorizontalContentAlignment="Center"
+                         VerticalContentAlignment="Center"
+                         />
+                <Grid Height="180" Width="180" Margin="0,10,0,10">
+                    <ed:Arc StartAngle="0" EndAngle="360" Stroke="#FF2F4C59"
+                            StrokeThickness="20"/>
+                    <ed:Arc StartAngle="0" EndAngle="270" Stroke="#FF3DB6DA"
+                            StrokeThickness="20" StrokeEndLineCap="Round"
+                            StrokeStartLineCap="Round">
+                        <ed:Arc.Effect>
+                            <DropShadowEffect
+                                ShadowDepth="0"
+                                Color="AliceBlue"
+                                Opacity="1"
+                                BlurRadius="15"/>
+                        </ed:Arc.Effect>
+                    </ed:Arc>
+
+                    <TextBox Text="Completed" Background="Transparent" FontFamily="Arial"
+                             Foreground="WhiteSmoke" FontSize="17" Height="30"
+                             Width="100" Margin="0,80,0,0" BorderThickness="0"
+                             FontWeight="Light" HorizontalContentAlignment="Center"
+                             VerticalContentAlignment="Center"/>
+                    <TextBox Text="75%" Background="Transparent"
+                             Foreground="WhiteSmoke" FontSize="45" FontFamily="Arial"
+                             Height="80" Width="120" BorderThickness="0"
+                             FontWeight="Light" HorizontalContentAlignment="Center"
+                             VerticalContentAlignment="Center"
+                             Margin="0,0,0,20"/>
+                </Grid>
+
+                <TextBox Text="Die Schultern des Atlas" Background="Transparent"
+                             Foreground="WhiteSmoke" FontSize="25" Height="30"
+                             BorderThickness="0"
+                             FontWeight="Light" Margin="60,10,0,0"/>
+                <StackPanel Margin="10,0,10,0" Orientation="Horizontal" Height="40">
+                    <Ellipse Height="30" Width="30" Fill="DarkGreen" Stroke="WhiteSmoke"
+                             StrokeThickness="2"/>
+                    <ProgressBar Minimum="0" Maximum="100" Value="100"
+                                 Width="400" Height="10" Margin="20,0,0,0"/>
+
+                </StackPanel>
+                <TextBox Text="Der Lauf der Pheidippides" Background="Transparent"
+                             Foreground="WhiteSmoke" FontSize="25" Height="30"
+                             BorderThickness="0"
+                             FontWeight="Light" Margin="60,10,0,0"/>
+                <StackPanel Margin="10,0,10,0" Orientation="Horizontal" Height="40">
+                    <Ellipse Height="30" Width="30" Fill="DarkGreen" Stroke="WhiteSmoke"
+                             StrokeThickness="2"/>
+                    <ProgressBar Minimum="0" Maximum="100" Value="100"
+                                 Width="400" Height="10" Margin="20,0,0,0"/>
+
+                </StackPanel>
+                <TextBox    Text="Die zwölf Taten des Herakles" Background="Transparent"
+                             Foreground="WhiteSmoke" FontSize="25" Height="30"
+                             BorderThickness="0"
+                             FontWeight="Light" Margin="60,10,0,0"/>
+                <StackPanel Margin="10,0,10,0" Orientation="Horizontal" Height="40">
+                    <Ellipse Height="30" Width="30" Fill="OrangeRed" Stroke="WhiteSmoke"
+                             StrokeThickness="2"/>
+                    <ProgressBar Minimum="0" Maximum="100" Value="50"
+                                 Width="400" Height="10" Margin="20,0,0,0"/>
+
+                </StackPanel>
+
+            </StackPanel>
+        </Grid>   
+    </Grid>
+</UserControl>

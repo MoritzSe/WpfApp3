@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="WpfApp3.Elements.FitnessSub.FitSub4"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfApp3.Elements.FitnessSub"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="1000">
+    <Grid Width="800">
+        <StackPanel>
+            <Image Source="/Images/user.png" Height="200" Margin="0,0,0,0"/>
+
+            <TextBox  x:Name="LoginName" Height="100" Background="Transparent"
+                      Foreground="#CCCCC6" FontFamily="Arial"
+                      FontSize="50" Opacity="0.5" Text="Username"
+                      VerticalContentAlignment="Center" 
+                      BorderThickness="0">
+                
+            </TextBox>
+            <TextBlock x:Name="LoginPassword" Height="100" Background="Transparent"
+                     Foreground="#CCCCC6" FontFamily="Arial"
+                     FontSize="50" Opacity="0.5" Text="Password">
+                
+            </TextBlock>
+
+            <Border Margin="0,0,0,0" Height="100" CornerRadius="20" 
+                    Background="#0065BD">
+                <TextBox Text="LOGIN" FontFamily="Arial" FontSize="75"
+                         Background="Transparent" Foreground="#CCCCC6"
+                         HorizontalContentAlignment="Center"
+                         VerticalContentAlignment="Center" 
+                         BorderThickness="0"/>
+
+            </Border>
+        </StackPanel>
+            
+    </Grid>
+    
+    
+</UserControl>

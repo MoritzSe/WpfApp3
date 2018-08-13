@@ -1,0 +1,416 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0C24A56D-1DD3-4018-9F84-5A256F261615}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WpfApp3</RootNamespace>
+    <AssemblyName>WpfApp3</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>0</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Expression.Drawing, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="buffer\FitnessCounterForStrength.xaml.cs">
+      <DependentUpon>FitnessCounterForStrength.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="buffer\FitnessTimerForCardio.xaml.cs">
+      <DependentUpon>FitnessTimerForCardio.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Elements\Date.xaml.cs">
+      <DependentUpon>Date.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Elements\DriveScreen.xaml.cs">
+      <DependentUpon>DriveScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Elements\FitnessMenue.xaml.cs">
+      <DependentUpon>FitnessMenue.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Elements\FitnessScreen.xaml.cs">
+      <DependentUpon>FitnessScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Elements\FitnessSub\FitSub1.xaml.cs">
+      <DependentUpon>FitSub1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Elements\FitnessSub\FitSub2.xaml.cs">
+      <DependentUpon>FitSub2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Elements\FitnessSub\FitSub3.xaml.cs">
+      <DependentUpon>FitSub3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Elements\FitnessSub\FitSub4.xaml.cs">
+      <DependentUpon>FitSub4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Elements\NavigationMenue.xaml.cs">
+      <DependentUpon>NavigationMenue.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Elements\NavigationScreen.xaml.cs">
+      <DependentUpon>NavigationScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Elements\NavigationSub\Navi_1.xaml.cs">
+      <DependentUpon>Navi_1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Elements\NavigationSub\Navi_2.xaml.cs">
+      <DependentUpon>Navi_2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Elements\NavigationSub\Navi_3.xaml.cs">
+      <DependentUpon>Navi_3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Elements\NavigationSub\Navi_4.xaml.cs">
+      <DependentUpon>Navi_4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Elements\SettingMenue.xaml.cs">
+      <DependentUpon>SettingMenue.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Elements\SettingSub\SubSetting2.xaml.cs">
+      <DependentUpon>SubSetting2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Elements\SettingSub\SubSetting3.xaml.cs">
+      <DependentUpon>SubSetting3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Elements\SettingSub\SubSetting4.xaml.cs">
+      <DependentUpon>SubSetting4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Elements\SettingSub\SubSetting1.xaml.cs">
+      <DependentUpon>SubSetting1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Elements\navigation_arrow.xaml.cs">
+      <DependentUpon>navigation_arrow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Elements\rpm.xaml.cs">
+      <DependentUpon>rpm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Elements\SettingScreen.xaml.cs">
+      <DependentUpon>SettingScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Elements\speed.xaml.cs">
+      <DependentUpon>speed.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Elements\Time.xaml.cs">
+      <DependentUpon>Time.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Parts\LockClosed.xaml.cs">
+      <DependentUpon>LockClosed.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Parts\LockOpen.xaml.cs">
+      <DependentUpon>LockOpen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tacho.xaml.cs">
+      <DependentUpon>Tacho.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Training\Training.cs" />
+    <Compile Include="Training\Exercise.cs" />
+    <Compile Include="UDP\Android.cs" />
+    <Compile Include="UDP\PacketAutopilot.cs" />
+    <Compile Include="UDP\PacketMenueNavigation.cs" />
+    <Compile Include="UDP\PacketSILAB.cs" />
+    <Compile Include="UDP\PacketSILABRpm.cs" />
+    <Compile Include="UDP\PacketSILABSpeed.cs" />
+    <Compile Include="UDP\UDP_Sender.cs" />
+    <Compile Include="UDP\UDP_Receiver.cs" />
+    <Page Include="buffer\FitnessCounterForStrength.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="buffer\FitnessTimerForCardio.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Elements\Date.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Elements\DriveScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Elements\FitnessMenue.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Elements\FitnessScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Elements\FitnessSub\FitSub1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Elements\FitnessSub\FitSub2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Elements\FitnessSub\FitSub3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Elements\FitnessSub\FitSub4.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Elements\NavigationMenue.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Elements\NavigationScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Elements\NavigationSub\Navi_1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Elements\NavigationSub\Navi_2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Elements\NavigationSub\Navi_3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Elements\NavigationSub\Navi_4.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Elements\SettingMenue.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Elements\SettingSub\SubSetting2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Elements\SettingSub\SubSetting3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Elements\SettingSub\SubSetting4.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Elements\SettingSub\SubSetting1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Elements\navigation_arrow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Elements\rpm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Elements\SettingScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Elements\speed.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Elements\Time.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Parts\LockClosed.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Parts\LockOpen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Tacho.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\TUM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\placeholder_image_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\navigation-arrow.png" />
+    <Resource Include="Images\steering-wheel.png" />
+    <Resource Include="Images\truck-front.png" />
+    <Resource Include="Images\valentines-heart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\idea.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Templates\" />
+    <Folder Include="Videos\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\touch-keyboard-w10-extended-01.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Fuel-Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\business-statistics-graphic.png" />
+    <Resource Include="Images\checkered-flag.png" />
+    <Resource Include="Images\cocktail-glass-with-liquor.png" />
+    <Resource Include="Images\dumbbell.png" />
+    <Resource Include="Images\gasoline-pump.png" />
+    <Resource Include="Images\hospital.png" />
+    <Resource Include="Images\hotel-building.png" />
+    <Resource Include="Images\icon.png" />
+    <Resource Include="Images\location-pointer.png" />
+    <Resource Include="Images\may-15-calendar-page-interface-symbol.png" />
+    <Resource Include="Images\medium-signal.png" />
+    <Resource Include="Images\next.png" />
+    <Resource Include="Images\rain-black-cloud-with-raindrops-falling-down.png" />
+    <Resource Include="Images\right-arrow.png" />
+    <Resource Include="Images\settings-work-tool.png" />
+    <Resource Include="Images\trophy-sportive-cup-silhouette.png" />
+    <Resource Include="Images\undo-button.png" />
+    <Resource Include="Images\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ac.png" />
+    <Resource Include="Images\car-seat-with-seatbelt.png" />
+    <Resource Include="Images\idea.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\thermometer-outlined-symbol-of-stroke.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bildschirm_verdeckung.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bildschirm verdeckung [Konvertiert]-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\TruckTopView_burned.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Map.PNG" />
+    <Resource Include="Images\Map2.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Map4.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Map4straight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Map4straighback.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Map4straighback_burned.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Folie1_burned.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\map copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\sound.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Twitter_Logo_WhiteOnImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\flogo-HexRBG-Wht-1024.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Twitter_Logo_Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Instagram_Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\flogo_RGB_HEX-1024.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Browser_burned.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

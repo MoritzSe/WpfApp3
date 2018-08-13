@@ -1,0 +1,17 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfApp3.Elements"
+             xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing" x:Class="WpfApp3.Elements.navigation_arrow"
+             mc:Ignorable="d" 
+             d:DesignHeight="200" d:DesignWidth="200"
+             Background = "Transparent">
+    <Grid>
+        <ed:BlockArrow Fill="WhiteSmoke" HorizontalAlignment="Center" 
+                       Height="100"  Orientation="Up" 
+                       Stroke="Black" VerticalAlignment="Center" 
+                       Width="70"/>
+    </Grid>
+</UserControl>

@@ -1,0 +1,133 @@
+﻿<UserControl x:Class="WpfApp3.Elements.NavigationScreen"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfApp3.Elements"
+             xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing"
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="1600">
+    <Grid>
+
+        <Grid VerticalAlignment="Top" Margin="0,50,0,0" Height="250">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!--<Image Grid.Column="0" Source="/Images/checkered-flag.png" Margin="20"
+                   Height="200" Width="200" VerticalAlignment="Top" Stretch="UniformToFill">
+                <Image.Clip>
+                    <EllipseGeometry Center="100,100"
+                                     RadiusX="100" RadiusY="100"/>
+                </Image.Clip>
+            </Image>-->
+            <Image Grid.Column="0" Source="/Images/checkered-flag.png" Margin="20"
+                   Height="200" Width="200" VerticalAlignment="Top" Stretch="UniformToFill">
+                <Image.Clip>
+                    <EllipseGeometry Center="100,100"
+                                     RadiusX="100" RadiusY="100"/>
+                </Image.Clip>
+                
+            </Image>
+
+            <Image Grid.Column="1" Source="/Images/undo-button.png" Margin="20"
+                   Height="200" Width="200" VerticalAlignment="Top">
+                <Image.Clip>
+                    <EllipseGeometry Center="100,100"
+                                     RadiusX="100"
+                                     RadiusY="100"/>
+                </Image.Clip>
+
+            </Image>
+
+            <Image Grid.Column="2" Source="/Images/location-pointer.png" Margin="20"
+                   Height="200" Width="200" VerticalAlignment="Top">
+                <Image.Clip>
+                    <EllipseGeometry Center="100,100"
+                                     RadiusX="100"
+                                     RadiusY="100"/>
+                </Image.Clip>
+                <!-- AC Bild ersetzen mit einem mit mehr Rand! -->
+
+            </Image>
+
+            <Image Grid.Column="3" Source="/Images/gasoline-pump.png" Margin="20,20,0,0"
+                   Width="250" Height="200" VerticalAlignment="Top"
+                   >
+                <Image.Clip>
+                    <EllipseGeometry Center="100,100"
+                                     RadiusX="150"
+                                     RadiusY="150"/>
+                </Image.Clip>
+            </Image>
+
+            <ed:Arc Grid.Column="0" ArcThickness="5" ArcThicknessUnit="Pixel" 
+                EndAngle="360" x:Name="Address"
+                Fill="#FFF4F4F5" HorizontalAlignment="Center" Height="250" 
+                Stretch="None" Stroke="Black" 
+                StartAngle="0" VerticalAlignment="Top" Width="250">
+                <ed:Arc.Effect>
+                    <DropShadowEffect ShadowDepth="0" 
+                                      Color="White"
+                                      Opacity="1"
+                                      BlurRadius="20">
+
+                    </DropShadowEffect>
+                </ed:Arc.Effect>
+            </ed:Arc>
+
+
+            <ed:Arc Grid.Column="1" ArcThickness="5" ArcThicknessUnit="Pixel" 
+                EndAngle="360" x:Name="Recent"
+                Fill="#FFF4F4F5" HorizontalAlignment="Center" Height="250" 
+                Stretch="None" Stroke="Black" 
+                StartAngle="0" VerticalAlignment="Top" Width="250">
+                <ed:Arc.Effect>
+                    <DropShadowEffect ShadowDepth="0" 
+                                      Color="White"
+                                      Opacity="0"
+                                      BlurRadius="20">
+
+                    </DropShadowEffect>
+                </ed:Arc.Effect>
+            </ed:Arc>
+            <ed:Arc Grid.Column="2" ArcThickness="5" ArcThicknessUnit="Pixel" 
+                EndAngle="360" x:Name="POI"
+                Fill="#FFF4F4F5" HorizontalAlignment="Center" Height="250" 
+                Stretch="None" Stroke="Black" 
+                StartAngle="0" VerticalAlignment="Top" Width="250">
+
+                <ed:Arc.Effect>
+                    <DropShadowEffect ShadowDepth="0" 
+                                      Color="White"
+                                      Opacity="0"
+                                      BlurRadius="20">
+
+                    </DropShadowEffect>
+                </ed:Arc.Effect>
+            </ed:Arc>
+            <ed:Arc Grid.Column="3" ArcThickness="5" ArcThicknessUnit="Pixel" 
+                EndAngle="360" x:Name="FuelMap"
+                Fill="#FFF4F4F5" HorizontalAlignment="Center" Height="250" 
+                Stretch="None" Stroke="Black" 
+                StartAngle="0" VerticalAlignment="Top" Width="250">
+                <ed:Arc.Effect>
+                    <DropShadowEffect ShadowDepth="0" 
+                                      Color="White"
+                                      Opacity="0"
+                                      BlurRadius="20">
+
+                    </DropShadowEffect>
+                </ed:Arc.Effect>
+            </ed:Arc>
+        </Grid>
+        
+
+        <Frame x:Name="NaviSubFrame" HorizontalAlignment="Center" VerticalAlignment="Bottom" 
+               Height="700" Width="1300"/>
+
+    </Grid>
+</UserControl>

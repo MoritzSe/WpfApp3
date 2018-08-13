@@ -1,0 +1,41 @@
+﻿<UserControl x:Class="WpfApp3.Elements.SettingSub.SubSetting4"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfApp3.Elements.SettingSub"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="1000">
+    <Grid>
+        <TextBox x:Name="LightText" FontFamily="Arial" 
+                   FontSize="50" Foreground="White"
+                   Background="Transparent"
+                   Text="Innenraumbeleuchtung on / off"
+                   HorizontalContentAlignment="Center"
+                   VerticalContentAlignment="Center" BorderThickness="0"
+                   Height="150" VerticalAlignment="Top"/>
+        <Grid Width="800" Height="200">
+            <Border BorderBrush="#CCCCC6" BorderThickness="2">
+                <Grid Width="400"  HorizontalAlignment="Left"
+                       x:Name="LightLeft"
+                       Background="#333333"/>
+            </Border>
+            
+
+            <Border BorderBrush="#CCCCC6" BorderThickness="1"
+                    Width="400" HorizontalAlignment="Right" 
+                    Name="lightborder">
+                <Border.Effect>
+                    <DropShadowEffect ShadowDepth="0"
+                                      Opacity="0"
+                                      Color="#CCCCC6"
+                                      BlurRadius="200"
+                                      x:Name="bordereffect"/>
+                </Border.Effect>
+                <Grid Width="500" HorizontalAlignment="Right"
+                       x:Name="LightRight"
+                  Background="#CCCCC6"/>
+            </Border>
+        </Grid>
+    </Grid>
+</UserControl>

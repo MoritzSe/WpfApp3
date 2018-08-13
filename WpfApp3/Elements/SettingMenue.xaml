@@ -1,0 +1,72 @@
+﻿<UserControl x:Class="WpfApp3.Elements.SettingMenue"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfApp3.Elements"
+             mc:Ignorable="d" 
+             d:DesignHeight="150" d:DesignWidth="1500">
+    <Grid>
+        <Polygon Points="0,50 1500,50 187.5,0">
+            <Polygon.Fill>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="Transparent" Offset="0"/>
+                    <GradientStop Color="#CCCCC6" Offset="0"/>
+                </LinearGradientBrush>
+            </Polygon.Fill>
+            <Polygon.Effect>
+                <DropShadowEffect Opacity="1" Color="#CCCCC6" BlurRadius="10" Direction="90" ShadowDepth="3"/>
+            </Polygon.Effect>
+        </Polygon>
+        <Border Height="100" VerticalAlignment="Bottom" BorderBrush="#CCCCC6" BorderThickness="2">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="0" Margin="10">
+                    <Image Grid.Column="0" Source="/Images/car-seat-with-seatbelt.png">
+                        <Image.Effect>
+                            <DropShadowEffect Opacity="1" Color="#CCCCC6" x:Name="SitzEffekt"
+                                          ShadowDepth="0" BlurRadius="20"/>
+                        </Image.Effect>
+                    </Image>
+                </Grid>
+
+
+                <Grid Grid.Column="1" Margin="15">
+                    <Image Grid.Column="1" Source="/Images/steering-wheel.png">
+                        <Image.Effect>
+                            <DropShadowEffect Opacity="0" Color="#CCCCC6" x:Name="LenkradEffekt"
+                                              ShadowDepth="0" BlurRadius="20"/>
+                        </Image.Effect>
+                    </Image>
+                </Grid>
+
+
+                <Grid Grid.Column="2" Margin="15">
+                    <Image Grid.Column="2" Source="/Images/ac.png">
+                        <Image.Effect>
+                            <DropShadowEffect Opacity="0" Color="#CCCCC6" x:Name="ACEffekt"
+                                              ShadowDepth="0" BlurRadius="20"/>
+                        </Image.Effect>
+                    </Image>
+                </Grid>
+
+                <Grid Grid.Column="3" Margin="15">
+                    <Image Grid.Column="3" Source="/Images/idea.png">
+                        <Image.Effect>
+                            <DropShadowEffect Opacity="0" Color="#CCCCC6" x:Name="LichtEffekt"
+                                              ShadowDepth="0" BlurRadius="20"/>
+                        </Image.Effect>
+                    </Image>
+                </Grid>
+               
+            </Grid>
+        </Border>
+            
+    </Grid>
+</UserControl>

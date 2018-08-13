@@ -1,0 +1,54 @@
+﻿<UserControl x:Class="WpfApp3.buffer.FitnessTimerForCardio"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing"
+             xmlns:local="clr-namespace:WpfApp3.buffer"
+             mc:Ignorable="d" 
+             d:DesignHeight="700" d:DesignWidth="1300">
+    <Grid>
+
+        <ed:Arc ArcThickness="5" EndAngle="360" Fill="#003359" HorizontalAlignment="Left" Height="409.2"
+                Margin="399.6,84,0,0" Stretch="None" StartAngle="0" VerticalAlignment="Top" Width="409.2">
+            <!--<ed:Arc.Effect>
+                <DropShadowEffect ShadowDepth="0"
+                                  Color="#005293"
+                                  BlurRadius="5"
+                                  Opacity="1"/>
+            </ed:Arc.Effect>-->
+            <ed:Arc.Effect>
+                <BlurEffect Radius="5"/>
+            </ed:Arc.Effect>
+        </ed:Arc>
+        <ed:Arc ArcThickness="10" EndAngle="360" Fill="#003359" HorizontalAlignment="Left" Height="215.2" 
+                Margin="496.6,180.8,0,0" Stretch="None" StartAngle="0" VerticalAlignment="Top" Width="215.2">
+            <ed:Arc.Effect>
+                <DropShadowEffect ShadowDepth="0"
+                                  Color="#005293"
+                                  BlurRadius="5"
+                                  Opacity="1"/>
+            </ed:Arc.Effect>
+
+        </ed:Arc>
+        <TextBox HorizontalAlignment="Left" Margin="524.6,109.1,0,522.5" Width="159.365" Foreground="WhiteSmoke" FontWeight="Light"
+                 FontSize="50" Background="Transparent" HorizontalContentAlignment="Center"
+                 VerticalContentAlignment="Center" BorderThickness="0" x:Name="tb"/>
+        <TextBox Text="km" Height="70" Background="Transparent" Foreground="WhiteSmoke"
+            HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+            BorderThickness="0" FontSize="50" FontWeight="Light" Margin="612.9,254.3,616.035,375.7"/>
+        <TextBox Text="{Binding Distance}" Height="70" Background="Transparent" Foreground="WhiteSmoke"
+            HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+            BorderThickness="0" FontSize="50" FontWeight="Light" Margin="524.6,254.3,687.1,375.7"/>
+
+
+        <ProgressBar Width="1000" HorizontalAlignment="Center" Background="Transparent" Foreground="Orange" Minimum="0"
+                     Maximum="100" Value="35" Orientation="Horizontal" Height=" 25" VerticalAlignment="Bottom"
+                     Margin="0,0,0,50"/>
+        <Image Source="/Images/location-pointer.png" Height="50" VerticalAlignment="Bottom"
+               Margin="475,0,0,75" HorizontalAlignment="Left"/>
+        <Image Source="/Images/checkered-flag.png" Height="100" VerticalAlignment="Bottom" HorizontalAlignment="Right"
+               Margin="0,0,50,75"/>
+    </Grid>
+
+</UserControl>

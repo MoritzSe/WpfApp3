@@ -1,0 +1,39 @@
+﻿<UserControl x:Class="WpfApp3.Elements.NavigationSub.Navi_2"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfApp3.Elements.NavigationSub"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="1000">
+    <Grid>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Width="1000">
+
+            <TextBox Background="#FF1A1A1A" Height="85" BorderBrush="#FF666666" BorderThickness="2"
+                     Text="Bolzmannstr. 3, 80000, Garching bei München" Foreground="#FFE2E2E2"
+                     FontFamily="Arial" FontSize="40" VerticalContentAlignment="Center" />
+            <TextBox Background="#FF1A1A1A" Height="85" BorderBrush="#FF666666" BorderThickness="2"
+                     Text="Ludwig-Prandtl-Str. 2, 80000, Garching bei München " Foreground="#FFE2E2E2"
+                     FontFamily="Arial" FontSize="40" VerticalContentAlignment="Center" />
+            <TextBox Background="#FF1A1A1A" Height="85" BorderBrush="#FF666666" BorderThickness="2"
+                     Text="Berlin, Zentrum" Foreground="#FFE2E2E2"
+                     FontFamily="Arial" FontSize="40" VerticalContentAlignment="Center" />
+            <TextBox Background="#FF1A1A1A" Height="85" BorderBrush="#FF666666" BorderThickness="2"
+                     Text="Nürnberg, Hauptbahnhof" Foreground="#FFE2E2E2"
+                     FontFamily="Arial" FontSize="40" VerticalContentAlignment="Center" />
+            <TextBox Background="#FF1A1A1A" Height="85" BorderBrush="#FF666666" BorderThickness="2"
+                     Text="Arccistr 21., 80000, München" Foreground="#FFE2E2E2"
+                     FontFamily="Arial" FontSize="40" VerticalContentAlignment="Center" />
+            <TextBox Background="#FF1A1A1A" Height="85" BorderBrush="#FF666666" BorderThickness="2"
+                     Text="Industriestr. 7a, 12345, Hinterdupfing" Foreground="#FFE2E2E2"
+                     FontFamily="Arial" FontSize="40" VerticalContentAlignment="Center" />
+            <TextBox Background="#FF1A1A1A" Height="85" BorderBrush="#FF666666" BorderThickness="2"/>
+            <TextBox Background="#FF1A1A1A" Height="85" BorderBrush="#FF666666" BorderThickness="2"/>
+
+
+        </StackPanel>
+        <Grid Width="50" HorizontalAlignment="Right" Background="#FF666666">
+            <Grid Height="35" Background="#FF1A1A1A" Margin="0,0,0,150"/>
+        </Grid>
+    </Grid>
+</UserControl>

@@ -1,0 +1,55 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfApp3.Elements"
+             xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing" x:Class="WpfApp3.Elements.DriveScreen"
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="1600">
+    <Grid>
+        <Line X1="800" Y1="0" X2="800" Y2="800"
+              Opacity="1" Stroke="White" StrokeThickness="5"/>
+
+        <Line X1="950" Y1="0" X2="1050" Y2="800"
+              Opacity="1" Stroke="White" StrokeThickness="5"/>
+
+        <Line X1="650" Y1="0" X2="550" Y2="800"
+              Opacity="1" Stroke="White" StrokeThickness="5"/>
+
+        <Line X1="800" Y1="0" X2="800" Y2="800"
+              Opacity="1" Stroke="White" StrokeThickness="5"/>
+
+        <Line X1="800" Y1="0" X2="800" Y2="800"
+              Opacity="1" Stroke="White" StrokeThickness="5"/>
+
+        <Line X1="800" Y1="0" X2="800" Y2="800"
+              Opacity="1" Stroke="White" StrokeThickness="5"/>
+
+        <Line X1="800" Y1="0" X2="800" Y2="800"
+              Opacity="1" Stroke="White" StrokeThickness="5"/>
+
+
+
+
+        <ed:BlockArrow ed:GeometryEffect.GeometryEffect="Sketch" 
+                       HorizontalAlignment="Center" Height="144" 
+                       Margin="700,0,0,0" Orientation="Up" 
+                       Stroke="White" StrokeThickness="5" 
+                       VerticalAlignment="Center" Width="115.2"
+                       Fill="White"/>
+        <TextBox HorizontalAlignment="Center" Height="84" Margin="1050,0,0,0" 
+                 TextWrapping="NoWrap" VerticalAlignment="Center" 
+                 Width="200" Background="Transparent"
+                 Text="50 km" Foreground="White"
+                 FontSize="50" FontWeight="Bold"
+                 FontStretch="Expanded" BorderThickness="0"/>
+        <Image Source="/Images/checkered-flag.png" Height="100" VerticalAlignment="Center" HorizontalAlignment="Center"
+               Margin="800,0,0,280"/>
+
+
+
+
+
+    </Grid>
+</UserControl>
